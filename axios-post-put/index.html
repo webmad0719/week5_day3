@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>AXIOS</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <h1>Personajes API con Axios</h1>
+
+            <div class="row justify-content-around">
+
+                <div class="col-md-5">
+                    <h2> Crea un nuevo personaje </h2>
+                    <hr>
+                    <form id="character-form">
+                        <div class="form-group">
+                            <label for="name-input">Nombre</label>
+                            <input type="text" class="form-control the-name" id="name-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occupation-input">Ocupación</label>
+                            <input type="text" class="form-control the-occupation" id="occupation-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weapon-input">Arma</label>
+                            <input type="text" class="form-control the-weapon" id="weapon-input">
+                        </div>
+
+                        <button class="btn btn-dark"> Guardar </button>
+                    </form>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 id="update-char"> Actualizar personaje </h2>
+                    <hr>
+                    <form id="update-form">
+
+                        <div class="form-group">
+                            <label for="name-input2">Nombre</label>
+                            <input type="text" class="form-control the-name" id="name-input2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occupation-input2">Ocupación</label>
+                            <input type="text" class="form-control the-occupation" id="occupation-input2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weapon-input2">Arma</label>
+                            <input type="text" class="form-control the-weapon" id="weapon-input2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="character-id-input">ID</label>
+                            <input type="number" class="form-control" id="character-id-input">
+                        </div>
+
+
+                        <button class="btn btn-dark"> Actualizar </button>
+                    </form>
+
+                    <article class="update">¿Qué personaje deseas editar? Pon su ID: <br>
+                        <input type="text" name="" id="theCharId">
+                        <button type="submit" id="getButton">Importar personaje</button>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Hitórico de acciones</h3>
+                    <hr>
+                    <ul id="characters-list"></ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Personajes actuales</h3>
+                    <hr>
+                    <ul id="characters-list-updated"></ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <!-- <button id="post-wall-e"> Post WALL-E </button> -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
